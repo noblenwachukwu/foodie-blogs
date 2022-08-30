@@ -21,11 +21,11 @@ authenticate('google', {failiureRedirect: '/'}),
 // @desc Logout User
 // @route /auth/logout
 
-router.get('/logout', (req, res, next)=>{
-    req.logout ((err)=> {
-        if(err){ return next (err)}
+router.get('/logout', (req, res, next) => {
+    req.logout((error)=>{
+        if (error) {return next(error)}
         res.redirect('/')
-    })
+    });  
 })
 
 

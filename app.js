@@ -46,7 +46,7 @@ app.engine('.hbs', exphbs.engine({
         stripTags,
         truncate,
         editIcon,
-        select,
+        select
     },
     defaultLayout: 'main',
     extname: '.hbs'
