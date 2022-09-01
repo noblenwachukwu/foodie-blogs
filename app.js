@@ -58,6 +58,7 @@ app.engine('.hbs', exphbs.engine({
 app.set('view engine', '.hbs')
 
 // Sessions
+try{
 app.use(
     session({
     secret: 'keyboard cat',
@@ -68,6 +69,10 @@ app.use(
          })
     })
 )
+}catch(err){
+console.error(err)
+}
+console.log("Store:", process.env.MONGO_URI)
 
 // PassPort middleware
 app.use(passport.initialize())
