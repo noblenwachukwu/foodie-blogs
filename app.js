@@ -12,6 +12,9 @@ const connectDB = require('./config/db')
 // Load config
 dotenv.config({path: './config/config.env'})
 
+console.log("ID:", process.env.GOOGLE_CLIENT_ID);
+console.log("SECRET:", process.env.GOOGLE_CLIENT_SECRET);
+
 // Passport config
 require('./config/passport')(passport)
 
