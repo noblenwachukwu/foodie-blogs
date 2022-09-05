@@ -13,17 +13,30 @@
             <div class="input-field">
                 <select name="status" id="status">
                     {{#select story.status}}
-                    <option value="public" selcted>Public</option>
-                    <option value="private">Private</option>
+                    <option value="Public" selcted>Public</option>
+                    <option value="Private">Private</option>
                     {{/select}}
                 </select>
                 <label for="status">Status</label>
             </div>
         </div>
+        <div class="row">
+            <div class="input-field">
+                <select name="meal" id="meal">
+                    {{#select story.status}}
+                    <option value="Breakfast" selcted>Breakfast</option>
+                    <option value="Lunch">Lunch</option>
+                    <option value="Dinner">Dinner</option>
+                    {{/select}}
+                </select>
+                <label for="status">Meal</label>
+            </div>
+        </div>
+        
 
         <div class="row">
             <div class="input-field">
-                <h5>Tell Us Your Expirience:</h5>
+                <h5>Tell Us Your Experience:</h5>
                 <textarea name="body" id="body">{{story.body}}</textarea>
             </div>
         </div>

@@ -12,8 +12,13 @@ const StorySchema = new mongoose.Schema({
     },
     status: {
         type: String,
-        default: 'public',
-        enum: ['public', 'private']
+        default: 'Public',
+        enum: ['Public', 'Private']
+    },
+    meal: {
+        type: String,
+        default: 'Dinner',
+        enum: ['Breakfast', 'Lunch', 'Dinner']
     },
    user: {
         type: mongoose.Schema.Types.ObjectId,

@@ -31,7 +31,7 @@ router.post('/', ensureAuth, async (req, res)=> {
 
 router.get('/', ensureAuth,async (req, res)=> {
         try{
-            const stories = await Story.find({status: 'public'})
+            const stories = await Story.find({status: 'Public'})
             .populate('user')
             .sort({createdAt: 'desc'})
             .lean()
@@ -59,7 +59,7 @@ router.get('/:id', ensureAuth, async (req, res)=> {
         }
 
         res.render('stories/show', {
-            story
+            story 
         })
     } catch(err){
         console.error(err)
@@ -131,7 +131,7 @@ router.get('/user/:userid', ensureAuth, async (req, res)=> {
     try{
         const stories = await Story.find({
             user: req.params.userid,
-            status: 'public'
+            status: 'Public'
         })
         .populate('user')
         .lean()
